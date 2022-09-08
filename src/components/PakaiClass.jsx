@@ -16,6 +16,10 @@ class PakaiClass extends React.Component {
     this.timerID = setInterval(() => this.tick(), 1000);
   }
 
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
   render() {
     return (
       <div className="App">
